@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-
     void OnTriggerEnter(Collider other)//uses collider to detect if we collided with weapon
     {
         if (other.tag == "Player")//checks that the player tag object collides with weapon

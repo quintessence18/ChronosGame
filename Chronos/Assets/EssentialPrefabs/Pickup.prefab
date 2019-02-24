@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8714954259975728559}
   - component: {fileID: 4590966060487173939}
   - component: {fileID: 3339169089595887848}
+  - component: {fileID: 4458225033637162568}
+  - component: {fileID: 5304234941575263603}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Untagged
@@ -77,3 +79,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4458225033637162568
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738579011718289276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300006, guid: 37bda95f1a3a441b4bc614c8fa1c0210, type: 3}
+--- !u!114 &5304234941575263603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738579011718289276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bdc8388b7b0f4de286c30a18737baad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
