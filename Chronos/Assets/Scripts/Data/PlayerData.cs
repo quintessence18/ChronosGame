@@ -6,7 +6,6 @@ using System.IO;
 
 public class PlayerData : MonoBehaviour
 {
-
     public string Name;//stores the username
     public int Level;//stores the level the user is on
     public int Score;//stores thex user's score
