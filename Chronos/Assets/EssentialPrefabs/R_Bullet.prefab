@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 8946769868342709912}
   - component: {fileID: 8946769868341709912}
   - component: {fileID: 8373912470491515744}
+  - component: {fileID: 7914070225387387211}
+  - component: {fileID: 4435124489802277157}
   m_Layer: 0
   m_Name: R_Bullet
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,3 +96,29 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7914070225387387211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946769868339778200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b14fa7282074d8b94a6bf103b8e7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &4435124489802277157
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946769868339778200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: eef63a27c596a4471a7d0bb4b37737f0, type: 3}
