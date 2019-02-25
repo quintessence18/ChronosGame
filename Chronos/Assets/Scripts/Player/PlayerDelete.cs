@@ -8,7 +8,11 @@ public class PlayerDelete : MonoBehaviour
         if(other.tag == "EnemyBullet")//if the enemy bullet collides with my player
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//resets the scene
-
         }
     }
 }
+
+
+
+
+

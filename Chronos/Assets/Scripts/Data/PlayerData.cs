@@ -6,12 +6,14 @@ using System.IO;
 
 public class PlayerData : MonoBehaviour
 {
+
     public string Name;//stores the username
     public int Level;//stores the level the user is on
     public int Score;//stores thex user's score
 
     void Save()//used to save the user's progress
     {
+        Name = Login.Instance.Username;
         JSONObject playerJson = new JSONObject();//new JsonObject used to save player data
         playerJson.Add("Name", Name);//used as the "first" element to store user's name
         playerJson.Add("Level", Level);//used as the "second" element to store user's Level
@@ -50,4 +52,5 @@ public class PlayerData : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K)) Load();//used to load data back
 
     }
+
 }
