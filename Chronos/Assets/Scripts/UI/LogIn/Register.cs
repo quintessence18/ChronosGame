@@ -8,7 +8,6 @@ using SimpleJSON;
 
 public class Register : MonoBehaviour
 {
-    public static Register register;
     //all object Boxes on the UI 
     public GameObject username;
     public GameObject email;

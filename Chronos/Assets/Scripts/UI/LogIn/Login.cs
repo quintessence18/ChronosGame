@@ -91,7 +91,6 @@ public class Login : MonoBehaviour
             print("Login Successfull");
             username.GetComponent<InputField>().text = "";//clears inputted text
             password.GetComponent<InputField>().text = "";//clears inputted text
-            SceneManager.LoadScene("LogIn");//Loads next scene (Main Menu)
         }
     }
 

@@ -6,7 +6,7 @@ using System.IO;
 
 public class PlayerData : MonoBehaviour
 {
-
+    [SerializeField] PManager manager;
     public string Name;//stores the username
     public int Level;//stores the level the user is on
     public int Score;//stores thex user's score
@@ -51,13 +51,6 @@ public class PlayerData : MonoBehaviour
     {
         Save();
         Load();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L)) Save();//used to save current data
-        if (Input.GetKeyDown(KeyCode.K)) Load();//used to load data back
-
     }
 
 }
