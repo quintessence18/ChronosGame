@@ -25,6 +25,7 @@ public class PlayerData : MonoBehaviour
         position.Add(transform.position.z);//stores the z coordinates
         playerJson.Add("Position", position);//stores the coordinates in the position variable
 
+        Debug.Log("Name is:" + Name);
         //Saves data to Computer
         string path = Application.persistentDataPath + Name + ".json";//creates a new path with the user's data
         File.WriteAllText(path, playerJson.ToString());//writes all the text to the set path as a string
@@ -44,6 +45,12 @@ public class PlayerData : MonoBehaviour
         playerJson["Position"].AsArray[0],
         playerJson["Position"].AsArray[1],
         playerJson["Position"].AsArray[2]);//pulls the position vectors of x,y, and z
+    }
+
+    private void Start()
+    {
+        Save();
+        Load();
     }
 
     void Update()
