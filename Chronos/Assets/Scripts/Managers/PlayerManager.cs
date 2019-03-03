@@ -16,6 +16,4 @@ public class PlayerManager : MonoBehaviour
 
         instance = this;
     }
-
-    public static PlayerData currentData;
 }

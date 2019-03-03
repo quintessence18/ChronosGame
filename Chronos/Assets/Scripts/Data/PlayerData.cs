@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using SimpleJSON;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
-    [SerializeField] PManager manager;
     public string Name;//stores the username
     public int Level;//stores the level the user is on
     public int Score;//stores thex user's score
 
     void Save()//used to save the user's progress
     {
+
         Name = Login.Instance.Username;
         JSONObject playerJson = new JSONObject();//new JsonObject used to save player data
         playerJson.Add("Name", Name);//used as the "first" element to store user's name
@@ -40,17 +41,22 @@ public class PlayerData : MonoBehaviour
         Level = playerJson["Level"];//gets the value  from the element labled Level
         Score = playerJson["Score"];//gets the value  from the element labled Score
 
-        //position
-        transform.position = new Vector3(
-        playerJson["Position"].AsArray[0],
-        playerJson["Position"].AsArray[1],
-        playerJson["Position"].AsArray[2]);//pulls the position vectors of x,y, and z
-    }
+        if (Level == 2)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        }
 
-    private void Start()
-    {
-        Save();
-        Load();
-    }
+        if (Level == 3)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        }
 
+
+        void Start()
+        {
+            Save();
+            Load();
+        }
+
+    }
 }

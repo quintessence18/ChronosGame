@@ -5,14 +5,18 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
 
 public class PManager : MonoBehaviour
 {
-    public GameObject player;
-    [SerializeField] private bool isPaused; 
+    public GameObject player;//to get my player controller script
+    public GameObject time;//to get my timescript
+    [SerializeField] private bool isPaused;//verify the game is paused etc.
     public GameObject PauseMenu;
     public GameObject GameManager;
     public float TimeUnfrozen;//variable to control the factor of normal time etc
+    PlayerController controller;
 
     void Start()
     {
@@ -39,15 +43,16 @@ public class PManager : MonoBehaviour
     public void ActivateMenu()
     {
         PauseMenu.SetActive(true);
-        Time.timeScale = 0;
-
+        player.GetComponent<PlayerController>().enabled = false;//to turn my playerController off - you initialy refreence to the parent
+        time.GetComponent<TimeEffect>().enabled = false;//to make my game stop completely
+        Time.timeScale = 0;//turns time off;
     }
 
     public void Resume()
     {
-        Time.timeScale = TimeUnfrozen;
+        time.GetComponent<TimeEffect>().enabled = true;//to make my time effect activate again
+        player.GetComponent<PlayerController>().enabled = true;//to turn my playerController back on 
         PauseMenu.SetActive(false);
-
     }
 
     public void ExitGame()
