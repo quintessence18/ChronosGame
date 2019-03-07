@@ -9,7 +9,7 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 cameraRotation = Vector3.zero;//defaults rotation to 0 if not moving
 
     [SerializeField]
-    private Camera cam;//allows me to assign the pllayer's camera in the inspeco
+    private Camera cam;//allows me to assign the player's camera in the inspeco
 
     private Rigidbody rb;
 

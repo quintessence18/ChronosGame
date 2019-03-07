@@ -11,6 +11,7 @@ using UnityEngine.Audio;
 public class PManager : MonoBehaviour
 {
     public GameObject player;//to get my player controller script
+    public GameObject crosshair;
     public GameObject time;//to get my timescript
     [SerializeField] private bool isPaused;//verify the game is paused etc.
     public GameObject PauseMenu;
@@ -44,6 +45,7 @@ public class PManager : MonoBehaviour
     {
         PauseMenu.SetActive(true);
         player.GetComponent<PlayerController>().enabled = false;//to turn my playerController off - you initialy refreence to the parent
+        crosshair.SetActive(false);//turns off my crosshairs
         time.GetComponent<TimeEffect>().enabled = false;//to make my game stop completely
         Time.timeScale = 0;//turns time off;
     }
@@ -52,11 +54,12 @@ public class PManager : MonoBehaviour
     {
         time.GetComponent<TimeEffect>().enabled = true;//to make my time effect activate again
         player.GetComponent<PlayerController>().enabled = true;//to turn my playerController back on 
-        PauseMenu.SetActive(false);
+        crosshair.SetActive(true);//turns my crosshair back on
+        PauseMenu.SetActive(false);//turns off my pause menu
     }
 
     public void ExitGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);//loads next scene
+        SceneManager.LoadScene("MainMenu");//loads main menu
     }
 }
