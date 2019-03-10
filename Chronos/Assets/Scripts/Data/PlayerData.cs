@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
+    public GameObject transitionScreen1;//holds loading screen 1
+    public GameObject transitionScreen2;//holds loading screen 2
     public string Name;//stores the username
     public int Level;//stores the level the user is on
     public int Score;//stores thex user's score
@@ -50,13 +52,24 @@ public class PlayerData : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
         }
+    }
 
+    void Start()
+    {
+        Save();
+        Load();
+    }
 
-        void Start()
+    void Update()
+    {
+        if (transitionScreen1.activeInHierarchy)
         {
             Save();
-            Load();
         }
-
+        if (transitionScreen2.activeInHierarchy)
+        {
+            Save();
+        }
     }
+
 }

@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  pauseScreen: {fileID: 4896209046080711870, guid: 89dec257872b544ad978c33839616778,
+    type: 3}
+  lockCursor: 1
 --- !u!114 &672764823955946956
 MonoBehaviour:
   m_ObjectHideFlags: 0

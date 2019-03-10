@@ -14,10 +14,25 @@ public class PlayerWatch : MonoBehaviour
     }
 
     public GameObject player;
+    public GameObject pauseScreen;
     public bool lockCursor;
-    private void Start()
+
+    public void Start()
     {
-        if (lockCursor)
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void Update()
+    {
+        if (pauseScreen.activeInHierarchy)
+        {
+            if (Cursor.visible == false)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+        }
+        else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

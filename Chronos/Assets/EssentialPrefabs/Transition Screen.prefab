@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7084063847556716891
 RectTransform:
   m_ObjectHideFlags: 0
@@ -263,8 +263,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\t\tTake care when aiming at your target!!!\n\t\tDistance can effect your
-    crosshair accuracy, always remember your optimal distance...\n"
+  m_Text: "\t\tTake care when aiming at your target!!!\n\t\tDistance can affect your
+    crosshair accuracy, always the set crosshair distance...\n"
 --- !u!1 &2422604386743686407
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,8 +343,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\t\tTake care when aiming at your target!!!\n\t\tDistance can effect your
-    crosshair accuracy, always remember your optimal distance...\n"
+  m_Text: "\t\tAim and shoot well, you only have six rounds in your chamber... \n\t\tOnce
+    they are gone...\n\t\tThey are gone!!!"
 --- !u!1 &4279967171181962021
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7971024479686964158
 RectTransform:
   m_ObjectHideFlags: 0
@@ -611,7 +611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.024971, y: 0}
+  m_AnchoredPosition: {x: -0.024963379, y: 0}
   m_SizeDelta: {x: 0.050049, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7971024479686964156

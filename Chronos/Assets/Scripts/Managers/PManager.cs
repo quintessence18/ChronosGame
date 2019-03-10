@@ -10,6 +10,7 @@ using UnityEngine.Audio;
 
 public class PManager : MonoBehaviour
 {
+    public bool lockCursor;
     public GameObject player;//to get my player controller script
     public GameObject crosshair;
     public GameObject time;//to get my timescript
@@ -53,9 +54,10 @@ public class PManager : MonoBehaviour
     public void Resume()
     {
         time.GetComponent<TimeEffect>().enabled = true;//to make my time effect activate again
-        player.GetComponent<PlayerController>().enabled = true;//to turn my playerController back on 
         crosshair.SetActive(true);//turns my crosshair back on
         PauseMenu.SetActive(false);//turns off my pause menu
+        player.GetComponent<PlayerController>().enabled = true;//to turn my playerController back on 
+
     }
 
     public void ExitGame()
