@@ -5219,6 +5219,41 @@ PrefabInstance:
       propertyPath: transitionScreen2
       value: 
       objectReference: {fileID: 1036721245}
+    - target: {fileID: 5975440581353081768, guid: 222eaf18aa7494203a2bf52314ff1f78,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.004717486
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975440581353081768, guid: 222eaf18aa7494203a2bf52314ff1f78,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.052137956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975440581353081768, guid: 222eaf18aa7494203a2bf52314ff1f78,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.008949377
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975440581353081768, guid: 222eaf18aa7494203a2bf52314ff1f78,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99858874
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975440581353081768, guid: 222eaf18aa7494203a2bf52314ff1f78,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -5.9820004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975440581353081768, guid: 222eaf18aa7494203a2bf52314ff1f78,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.48900002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975440581353081768, guid: 222eaf18aa7494203a2bf52314ff1f78,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 222eaf18aa7494203a2bf52314ff1f78, type: 3}
 --- !u!114 &2122051351 stripped
@@ -7022,6 +7057,23 @@ PrefabInstance:
       propertyPath: playerData
       value: 
       objectReference: {fileID: 2122051351}
+    - target: {fileID: 4896209046080717058, guid: 89dec257872b544ad978c33839616778,
+        type: 3}
+      propertyPath: m_Name
+      value: LogOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896209046071072188, guid: 89dec257872b544ad978c33839616778,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LogOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896209046071111020, guid: 89dec257872b544ad978c33839616778,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Log Out
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89dec257872b544ad978c33839616778, type: 3}
 --- !u!114 &4975684428386770372 stripped

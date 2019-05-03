@@ -1667,6 +1667,21 @@ PrefabInstance:
       propertyPath: playerData
       value: 
       objectReference: {fileID: 658743408}
+    - target: {fileID: 4896209046080717058, guid: 89dec257872b544ad978c33839616778,
+        type: 3}
+      propertyPath: m_Name
+      value: Log Out
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896209046071072188, guid: 89dec257872b544ad978c33839616778,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LogOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896209046071111020, guid: 89dec257872b544ad978c33839616778,
+        type: 3}
+      propertyPath: m_Text
+      value: Log Out
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89dec257872b544ad978c33839616778, type: 3}
 --- !u!114 &671894654 stripped
