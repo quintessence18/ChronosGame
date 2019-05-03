@@ -24,9 +24,9 @@ public class Walkthrough : MonoBehaviour
             Debug.Log(randomIndex);//will show the number
             if (randomIndex == 1)//looks at a number and chooses the screen assigned
             {
-                transitionScreen1.SetActive(true);
-                crosshair.SetActive(false);
-                StartCoroutine(waitTime());
+                transitionScreen1.SetActive(true);//turns on the transition screen
+                crosshair.SetActive(false);//turns off the crosshair
+                StartCoroutine(waitTime());//starts the countdown time till the next level
             }
             else
             {
@@ -39,7 +39,7 @@ public class Walkthrough : MonoBehaviour
 
     IEnumerator waitTime()
     {
-        yield return new WaitForSeconds(4);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return new WaitForSeconds(4);//timer of 4 seconds
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//loads the next level
     }
 }

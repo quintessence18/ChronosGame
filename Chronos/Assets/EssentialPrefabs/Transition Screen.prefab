@@ -264,7 +264,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\t\tTake care when aiming at your target!!!\n\t\tDistance can affect your
-    crosshair accuracy, always the set crosshair distance...\n"
+    crosshair accuracy, always remember the set crosshair distance...\n"
 --- !u!1 &2422604386743686407
 GameObject:
   m_ObjectHideFlags: 0

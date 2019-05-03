@@ -11,3 +11,4 @@ public class GunMov : MonoBehaviour
         transform.LookAt(playerPos);
     }
 }
+

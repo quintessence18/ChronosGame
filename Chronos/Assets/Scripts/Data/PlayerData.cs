@@ -15,7 +15,6 @@ public class PlayerData : MonoBehaviour
 
     void Save()//used to save the user's progress
     {
-
         Name = Login.Instance.Username;
         JSONObject playerJson = new JSONObject();//new JsonObject used to save player data
         playerJson.Add("Name", Name);//used as the "first" element to store user's name
@@ -28,36 +27,40 @@ public class PlayerData : MonoBehaviour
         position.Add(transform.position.z);//stores the z coordinates
         playerJson.Add("Position", position);//stores the coordinates in the position variable
 
-        Debug.Log("Name is:" + Name);
+
         //Saves data to Computer
         string path = Application.persistentDataPath + Name + ".json";//creates a new path with the user's data
         File.WriteAllText(path, playerJson.ToString());//writes all the text to the set path as a string
+        Debug.Log(path);
     }
 
     void Load()//used to load back user's data
     {
+        Name = Login.Instance.Username;
         string path = Application.persistentDataPath + Name + ".json";//checks for the nameed filepath and assigns to path
         string jsonString = File.ReadAllText(path);//reads all data in the path
         JSONObject playerJson = (JSONObject)JSON.Parse(jsonString);//creates a json object to access each value, using parse
         Name = playerJson["Name"];//gets the value from the element labled Name
-        Level = playerJson["Level"];//gets the value  from the element labled Level
         Score = playerJson["Score"];//gets the value  from the element labled Score
 
-        if (Level == 2)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        }
-
-        if (Level == 3)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
-        }
     }
 
     void Start()
     {
-        Save();
-        Load();
+        if (Level == 0)
+        {
+            Save();
+        }
+
+        if (Level == 1)
+        {
+            Load();
+        }
+
+        if (Level == 2)
+        {
+            Load();
+        }
     }
 
     void Update()

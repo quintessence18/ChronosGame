@@ -92,7 +92,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2817648562332462645}
-  - component: {fileID: 2817648562332462644}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -115,21 +114,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2817648562332462644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2817648562332462640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5165803520d21483f97ab8be356a1b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  Level: 0
-  Score: 0
 --- !u!1 &2817648562664747610
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +160,7 @@ GameObject:
   - component: {fileID: 2817648562786042117}
   - component: {fileID: 2817648562786042116}
   - component: {fileID: 1525497463650714521}
+  - component: {fileID: 3855844943117092281}
   m_Layer: 0
   m_Name: PlayerModel
   m_TagString: Player
@@ -312,6 +297,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd37d2c6f4e43cf91fba79f24a7637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3855844943117092281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2817648562786042125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5165803520d21483f97ab8be356a1b11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionScreen1: {fileID: 0}
+  transitionScreen2: {fileID: 0}
+  Name: 
+  Level: 0
+  Score: 0
 --- !u!1 &5975440581353445256
 GameObject:
   m_ObjectHideFlags: 0

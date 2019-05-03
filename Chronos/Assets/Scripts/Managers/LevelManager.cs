@@ -14,18 +14,24 @@ public class LevelManager : MonoBehaviour
         if (currentName == "Tutorial")//checks the name of the scene
         {
 
-            playerdata.Level = 1;
+            playerdata.Level = 0;
 
         }
         if (currentName == "Level1")
         {
+            playerdata.Level = 1;
+
+        }
+        if (currentName == "Level2")
+        {
             playerdata.Level = 2;
 
         }
-        if (currentName == "Level 2")
-        {
-            playerdata.Level = 3;
 
+        if (currentName == "Finished")
+        {
+            playerdata.Level = 0;
+            playerdata.Score = 0;
         }
     }
 

@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class StatsText : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField] PlayerData playerData;
     public Text playerName;
     public Text currentLevel;
     public Text currentScore;
 
     private void Update()
     {
-        playerName.text = player.GetComponent<PlayerData>().Name;
-        currentLevel.text = player.GetComponent<PlayerData>().Level.ToString();
-        currentScore.text = player.GetComponent<PlayerData>().Score.ToString();
+        playerName.text = playerData.Name;
+        currentLevel.text = playerData.Level.ToString();
+        currentScore.text = playerData.Score.ToString();
     }
 }
