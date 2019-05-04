@@ -1,78 +1,1 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using SimpleJSON;
-using System.IO;
-using UnityEngine.SceneManagement;
-
-public class PlayerData : MonoBehaviour
-{
-    public GameObject transitionScreen1;//holds loading screen 1
-    public GameObject transitionScreen2;//holds loading screen 2
-    public string Name;//stores the username
-    public int Level;//stores the level the user is on
-    public int Score;//stores thex user's score
-
-    void Save()//used to save the user's progress
-    {
-        Name = Login.Instance.Username;
-        JSONObject playerJson = new JSONObject();//new JsonObject used to save player data
-        playerJson.Add("Name", Name);//used as the "first" element to store user's name
-        playerJson.Add("Level", Level);//used as the "second" element to store user's Level
-        playerJson.Add("Score", Score);//used as the "third" element to store user's Score
-        //Position
-        JSONArray position = new JSONArray();//defines the variable to hold the user's position
-        position.Add(transform.position.x);//stores the x coordinates
-        position.Add(transform.position.y);//stores the y coordinates
-        position.Add(transform.position.z);//stores the z coordinates
-        playerJson.Add("Position", position);//stores the coordinates in the position variable
-
-
-        //Saves data to Computer
-        string path = Application.persistentDataPath + Name + ".json";//creates a new path with the user's data
-        File.WriteAllText(path, playerJson.ToString());//writes all the text to the set path as a string
-        Debug.Log(path);
-    }
-
-    void Load()//used to load back user's data
-    {
-        Name = Login.Instance.Username;
-        string path = Application.persistentDataPath + Name + ".json";//checks for the nameed filepath and assigns to path
-        string jsonString = File.ReadAllText(path);//reads all data in the path
-        JSONObject playerJson = (JSONObject)JSON.Parse(jsonString);//creates a json object to access each value, using parse
-        Name = playerJson["Name"];//gets the value from the element labled Name
-        Score = playerJson["Score"];//gets the value  from the element labled Score
-
-    }
-
-    void Start()
-    {
-        if (Level == 0)
-        {
-            Save();
-        }
-
-        if (Level == 1)
-        {
-            Load();
-        }
-
-        if (Level == 2)
-        {
-            Load();
-        }
-    }
-
-    void Update()
-    {
-        if (transitionScreen1.activeInHierarchy)
-        {
-            Save();
-        }
-        if (transitionScreen2.activeInHierarchy)
-        {
-            Save();
-        }
-    }
-
-}
+using System.Collections;using System.Collections.Generic;using UnityEngine;using SimpleJSON;using System.IO;using UnityEngine.SceneManagement;public class PlayerData : MonoBehaviour{    public GameObject transitionScreen1;//holds loading screen 1    public GameObject transitionScreen2;//holds loading screen 2    public string Name;//stores the username    public int Level;//stores the level the user is on    public int Score;//stores thex user's score    void Save()//used to save the user's progress    {        Name = Login.Instance.Username;        JSONObject playerJson = new JSONObject();//new JsonObject used to save player data        playerJson.Add("Name", Name);//used as the "first" element to store user's name        playerJson.Add("Level", Level);//used as the "second" element to store user's Level        playerJson.Add("Score", Score);//used as the "third" element to store user's Score        //Position        JSONArray position = new JSONArray();//defines the variable to hold the user's position        position.Add(transform.position.x);//stores the x coordinates        position.Add(transform.position.y);//stores the y coordinates        position.Add(transform.position.z);//stores the z coordinates        playerJson.Add("Position", position);//stores the coordinates in the position variable        //Saves data to Computer        string path = Application.persistentDataPath + Name + ".json";//creates a new path with the user's data        File.WriteAllText(path, playerJson.ToString());//writes all the text to the set path as a string        Debug.Log(path);    }    void Load()//used to load back user's data    {        Name = Login.Instance.Username;        string path = Application.persistentDataPath + Name + ".json";//checks for the nameed filepath and assigns to path        string jsonString = File.ReadAllText(path);//reads all data in the path        JSONObject playerJson = (JSONObject)JSON.Parse(jsonString);//creates a json object to access each value, using parse        Name = playerJson["Name"];//gets the value from the element labled Name        Score = playerJson["Score"];//gets the value  from the element labled Score    }    void Start()    {        if (Level == 0)        {            Score = 0;//ensures if user starts again their score is 0            Save();        }        if (Level == 1)        {            Load();        }        if (Level == 2)        {            Load();        }    }    void Update()    {        if (transitionScreen1.activeInHierarchy)        {            Save();        }        if (transitionScreen2.activeInHierarchy)        {            Save();        }    }}
