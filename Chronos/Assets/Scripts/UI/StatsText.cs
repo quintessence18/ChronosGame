@@ -1,19 +1,1 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class StatsText : MonoBehaviour
-{
-    [SerializeField] PlayerData playerData;
-    public Text playerName;
-    public Text currentLevel;
-    public Text currentScore;
-
-    private void Update()
-    {
-        playerName.text = playerData.Name;
-        currentLevel.text = playerData.Level.ToString();
-        currentScore.text = playerData.Score.ToString();
-    }
-}
+using System.Collections;using System.Collections.Generic;using UnityEngine;using UnityEngine.UI;public class StatsText : MonoBehaviour{    [SerializeField] PlayerData playerData;    public Text playerName;//text box to display Username    public Text currentLevel;//text box to display Level    public Text currentScore;//text box to display Score    private void Update()    {        playerName.text = playerData.Name;//Displays the user's name        currentLevel.text = playerData.Level.ToString();//Displays the user's level as a string        currentScore.text = playerData.Score.ToString();//Displays the user's score as a string    }}
