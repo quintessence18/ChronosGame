@@ -1,3 +1,3 @@
 # Chronos Game 
-OCR A-Level Programming Project \n\
+OCR A-Level Programming Project
 by Lawrence Ssonko
